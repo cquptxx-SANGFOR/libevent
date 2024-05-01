@@ -85,6 +85,7 @@ void event_logv_(int severity, const char *errstr, const char *fmt, va_list ap)
 #define event_debug(x) ((void)0)
 #endif
 
+// 取消名为EV_CHECK_FMT的宏定义
 #undef EV_CHECK_FMT
 
 #ifdef __cplusplus

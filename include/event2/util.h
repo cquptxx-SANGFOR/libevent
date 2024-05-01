@@ -23,6 +23,14 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
+/*
+ * 打开libevent的一些文件，会发现使用了很多宏定义，并根据一些宏定义
+ * 而进行条件编译，这些宏定义一般来自event-config.h文件中。
+ * 比如下面这些宏定义，是根据是否定义了某个宏，而决定是否包含某个头文件。
+ * 从宏的名字看，指明了是否有这个头文件或者函数，因为libevent是跨平台的，
+ * 必须考虑某些系统可能没有一些头文件或者函数。
+ */
 #ifndef EVENT2_UTIL_H_INCLUDED_
 #define EVENT2_UTIL_H_INCLUDED_
 
